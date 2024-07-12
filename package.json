@@ -39,5 +39,5 @@
     "rollup-plugin-string": "^3.0.0",
     "typescript": "~4.9.0"
   },
-  "license": "SEE SPINE-LICENSE"
+  "license": "MIT"
 }
