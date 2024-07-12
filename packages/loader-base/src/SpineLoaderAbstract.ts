@@ -55,7 +55,8 @@ export abstract class SpineLoaderAbstract<SKD extends ISkeletonData> {
 
                 // #region Parsing spine data
                 testParse(asset: unknown, options: LoadAsset): Promise<boolean> {
-                    const isJsonSpineModel = checkExtension(options.src, '.json') && isJson(asset);
+                    // @ts-ignore
+                    const isJsonSpineModel = (checkExtension(options.src, '.json') || options.loadParser === 'loadJson') && isJson(asset);
                     const isBinarySpineModel = checkExtension(options.src, '.skel') && isBuffer(asset);
 
                     // From 6.x loader. If the atlas is strictly false we bail
@@ -73,7 +74,8 @@ export abstract class SpineLoaderAbstract<SKD extends ISkeletonData> {
                         basePath += '/';
                     }
 
-                    const isJsonSpineModel = checkExtension(loadAsset.src, '.json') && isJson(asset);
+                    // @ts-ignore
+                    const isJsonSpineModel = (checkExtension(loadAsset.src, '.json')|| loadAsset.loadParser === 'loadJson') && isJson(asset);
                     // const isBinarySpineModel = fileExt === 'slel' && isBuffer(asset);
 
                     let parser: ISkeletonParser = null;
@@ -129,7 +131,8 @@ export abstract class SpineLoaderAbstract<SKD extends ISkeletonData> {
                         atlasPath = `${basePath + fileName}.atlas`;
                     }
 
-                    const textureAtlas = await loader.load<TextureAtlas>({ src: atlasPath, data: metadata, alias: metadata.spineAtlasAlias });
+                    // @ts-ignore
+                    const textureAtlas = await loader.load<TextureAtlas>({ src: atlasPath, data: metadata, alias: metadata.spineAtlasAlias, loadParser: 'loadTxt' });
 
                     return spineAdapter.parseData(parser, textureAtlas, dataToParse);
                 },

@@ -32,7 +32,8 @@ const spineTextureAtlasLoader: AssetExtension<RawAtlas | TextureAtlas, ISpineMet
         },
 
         testParse(asset: unknown, options: LoadAsset): Promise<boolean> {
-            const isExtensionRight = checkExtension(options.src, '.atlas');
+            // @ts-ignore
+            const isExtensionRight = checkExtension(options.src, '.atlas') || options.loadParser === 'loadTxt';
             const isString = typeof asset === 'string';
 
             return Promise.resolve(isExtensionRight && isString);
@@ -101,7 +102,8 @@ export const makeSpineTextureAtlasLoaderFunctionFromPixiLoaderObject = (loader: 
 
         const url = utils.path.normalize([...atlasBasePath.split(utils.path.sep), pageName].join(utils.path.sep));
 
-        const texture = await loader.load<Texture>({ src: url, data: imageMetadata });
+        // @ts-ignore
+        const texture = await loader.load<Texture>({ src: url, data: imageMetadata, loadParser: 'loadTextures' });
 
         textureLoadedCallback(texture.baseTexture);
     };
