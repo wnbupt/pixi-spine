@@ -65,11 +65,11 @@ PIXI.Assets.load("spine-data-1/HERO.json").then((resource) => {
 
 ### Where are spine core classes?
 
-Classes like `AttachmentType`, `TextureAtlas`, `TextureRegion` and `Utils` are shared across all spine versions, and re-exported by all bundles. But if you want to see them directly, they are in `@pixi-spine/base`.
+Classes like `AttachmentType`, `TextureAtlas`, `TextureRegion` and `Utils` are shared across all spine versions, and re-exported by all bundles. But if you want to see them directly, they are in `@pixi-spine-patch/base`.
 
 Base also contains unified interfaces, `ISkeleton`, `ISkeletonData`, `IAnimationData` and so on, see `ISkeleton.ts` file. 
 
-Most of classes are spine-version-dependant, including `Skeleton`, `SkeletonData`, they are stored in corresponding packages `@pixi-spine/runtime-3.8` and so on.
+Most of classes are spine-version-dependant, including `Skeleton`, `SkeletonData`, they are stored in corresponding packages `@pixi-spine-patch/runtime-3.8` and so on.
 
 ### Browser builds
 
@@ -79,7 +79,7 @@ For browser builds, you will need to grab either the `.js` (for CJS) file or the
 
 Main bundle `pixi-spine` weights 374 KB (unzipped).
 
-Bundle `@pixi-spine/all-3.8` weights about 165 KB (unzipped).
+Bundle `@pixi-spine-patch/all-3.8` weights about 165 KB (unzipped).
 
 If you want to use different version (3.7) please look how modules `loader-3.8` and `pixi-spine-3.8` are made.
 
@@ -88,10 +88,10 @@ Basically, you have to copy its code in a separate file in your project, and alt
 For example, here's bundle for 3.8:
 
 ```js
-import '@pixi-spine/loader-3.8'; // Side effect install the loader
+import '@pixi-spine-patch/loader-3.8'; // Side effect install the loader
 // eslint-disable-next-line @typescript-eslint/no-duplicate-imports
-export * from '@pixi-spine/runtime-3.8';
-export * from '@pixi-spine/base';
+export * from '@pixi-spine-patch/runtime-3.8';
+export * from '@pixi-spine-patch/base';
 ```
 
 In case author was too lazy to publish`loader-3.7`, you can do the same trick with them, just look in sources of `loader-3.8`.

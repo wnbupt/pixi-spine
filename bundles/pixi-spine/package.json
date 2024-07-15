@@ -17,23 +17,23 @@
     "bundle": "dist/pixi-spine.js",
     "bundleModule": "dist/pixi-spine.mjs",
     "globals": {
-      "@pixi-spine/base": "PIXI.spine",
-      "@pixi-spine/runtime-3.7": "PIXI.spine37",
-      "@pixi-spine/runtime-3.8": "PIXI.spine38",
-      "@pixi-spine/runtime-4.0": "PIXI.spine40",
-      "@pixi-spine/runtime-4.1": "PIXI.spine41",
-      "@pixi-spine/loader-base": "PIXI.spine",
-      "@pixi-spine/loader-uni": "PIXI.spine"
+      "@pixi-spine-patch/base": "PIXI.spine",
+      "@pixi-spine-patch/runtime-3.7": "PIXI.spine37",
+      "@pixi-spine-patch/runtime-3.8": "PIXI.spine38",
+      "@pixi-spine-patch/runtime-4.0": "PIXI.spine40",
+      "@pixi-spine-patch/runtime-4.1": "PIXI.spine41",
+      "@pixi-spine-patch/loader-base": "PIXI.spine",
+      "@pixi-spine-patch/loader-uni": "PIXI.spine"
     }
   },
   "dependencies": {
-    "@pixi-spine/base": "^4.0.3",
-    "@pixi-spine/loader-base": "^4.0.4",
-    "@pixi-spine/loader-uni": "^4.0.3",
-    "@pixi-spine/runtime-3.7": "^4.0.3",
-    "@pixi-spine/runtime-3.8": "^4.0.3",
-    "@pixi-spine/runtime-4.0": "^4.0.3",
-    "@pixi-spine/runtime-4.1": "^4.0.3"
+    "@pixi-spine-patch/base": "^4.0.3",
+    "@pixi-spine-patch/loader-base": "^4.0.4",
+    "@pixi-spine-patch/loader-uni": "^4.0.3",
+    "@pixi-spine-patch/runtime-3.7": "^4.0.3",
+    "@pixi-spine-patch/runtime-3.8": "^4.0.3",
+    "@pixi-spine-patch/runtime-4.0": "^4.0.3",
+    "@pixi-spine-patch/runtime-4.1": "^4.0.3"
   },
   "peerDependencies": {
     "@pixi/assets": "^7.0.0",
@@ -81,6 +81,6 @@
   "license": "SEE SPINE-LICENSE",
   "homepage": "https://github.com/pixijs/pixi-spine/#readme",
   "devDependencies": {
-    "@pixi-spine/rollup-config": "*"
+    "@pixi-spine-patch/rollup-config": "*"
   }
 }

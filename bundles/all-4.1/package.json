@@ -1,5 +1,5 @@
 {
-  "name": "@pixi-spine/all-4.1",
+  "name": "@pixi-spine-patch/all-4.1",
   "version": "4.0.4",
   "description": "Pixi integration with EsotericSoftware Spine, big, contains runtime for 4.1",
   "main": "lib/index.js",
@@ -17,17 +17,17 @@
     "bundle": "dist/pixi-spine-4.1.js",
     "bundleModule": "dist/pixi-spine-4.1.mjs",
     "globals": {
-      "@pixi-spine/base": "PIXI.spine",
-      "@pixi-spine/loader-4.1": "PIXI.spine",
-      "@pixi-spine/loader-base": "PIXI.spine",
-      "@pixi-spine/runtime-4.1": "PIXI.spine41"
+      "@pixi-spine-patch/base": "PIXI.spine",
+      "@pixi-spine-patch/loader-4.1": "PIXI.spine",
+      "@pixi-spine-patch/loader-base": "PIXI.spine",
+      "@pixi-spine-patch/runtime-4.1": "PIXI.spine41"
     }
   },
   "dependencies": {
-    "@pixi-spine/base": "^4.0.3",
-    "@pixi-spine/loader-4.1": "^4.0.3",
-    "@pixi-spine/loader-base": "^4.0.4",
-    "@pixi-spine/runtime-4.1": "^4.0.3"
+    "@pixi-spine-patch/base": "^4.0.3",
+    "@pixi-spine-patch/loader-4.1": "^4.0.3",
+    "@pixi-spine-patch/loader-base": "^4.0.4",
+    "@pixi-spine-patch/runtime-4.1": "^4.0.3"
   },
   "peerDependencies": {
     "@pixi/assets": "^7.0.0",
@@ -76,6 +76,6 @@
   "license": "SEE SPINE-LICENSE",
   "homepage": "https://github.com/pixijs/pixi-spine/#readme",
   "devDependencies": {
-    "@pixi-spine/rollup-config": "*"
+    "@pixi-spine-patch/rollup-config": "*"
   }
 }
