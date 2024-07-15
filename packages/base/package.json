@@ -54,5 +54,6 @@
   "homepage": "https://github.com/pixijs/pixi-spine/#readme",
   "devDependencies": {
     "@pixi-spine-patch/rollup-config": "*"
-  }
+  },
+  "gitHead": "3e36fa3c8d79e77fe0d221dbec01d073554f435c"
 }
