@@ -78,5 +78,5 @@
   "devDependencies": {
     "@pixi-spine-patch/rollup-config": "*"
   },
-  "gitHead": "3e36fa3c8d79e77fe0d221dbec01d073554f435c"
+  "gitHead": "39a36aac3350ce72622c3ca4f989801d580eb6b5"
 }
